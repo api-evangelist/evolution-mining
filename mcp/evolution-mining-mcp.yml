@@ -1,0 +1,38 @@
+name: Evolution Mining MCP Server
+type: MCPServer
+generated: '2026-10-21'
+method: probed
+status: none
+source:
+- https://evolutionmining.com/.well-known/oauth-protected-resource
+- https://evolutionmining.com/wp-json/mcp/mcp-oauth-server
+description: >-
+  Evolution Mining (ASX: EVN), a gold and copper miner, publishes no developer API, OpenAPI contract
+  or documented MCP server. Its WordPress site does serve an OAuth protected-resource metadata
+  document (HTTP 200) naming a resource at https://evolutionmining.com/wp-json/mcp/mcp-oauth-server
+  with scope "mcp", which looks like a WordPress MCP plugin side-effect. A plain GET of that resource
+  returned HTTP 403 (HTML), and no documentation, tool list or announcement of an MCP server was found.
+  It is recorded as observed, not as a working agent surface. No candidate tools were derived because
+  there is no OpenAPI to derive them from.
+deployment:
+  mode: none
+  auth: unknown
+  verified: probed
+x-observed:
+  protected_resource_metadata:
+    url: https://evolutionmining.com/.well-known/oauth-protected-resource
+    http_status: 200
+    resource: https://evolutionmining.com/wp-json/mcp/mcp-oauth-server
+    authorization_servers:
+    - https://evolutionmining.com
+    bearer_methods_supported:
+    - header
+    scopes_supported:
+    - mcp
+  resource_get:
+    url: https://evolutionmining.com/wp-json/mcp/mcp-oauth-server
+    http_status: 403
+    content_type: text/html
+  probed: '2026-10-21'
+  note: Advertised only by well-known metadata; not documented. No JSON-RPC calls were made.
+tools: []

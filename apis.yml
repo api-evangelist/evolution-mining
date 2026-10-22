@@ -1,23 +1,101 @@
 aid: evolution-mining
+
 name: Evolution Mining
-description: 'Evolution Mining is a company surfaced via the API Evangelist harvest backlog (source: australia-apidays-2026)
-  and added to the network as a stub for full-pipeline profiling.'
+
+description: 'Evolution Mining Ltd (ASX: EVN) is an Australian-headquartered gold miner that describes itself as a leading,
+  globally relevant gold company operating mines in Australia and Canada, including Cowal, Ernest Henry, Mt Rawdon, Mungari,
+  Northparkes and Red Lake. Its website (evolutionmining.com; evolutionmining.com.au redirects there) publishes an investor
+  centre with ASX announcements, reports and an Interactive Analyst Centre, plus sustainability disclosures, news and careers.
+  No public developer API, documentation or developer portal was found on its site. It was surfaced via the API Evangelist
+  harvest backlog (source: australia-apidays-2026).'
+
+image: https://evolutionmining.com/wp-content/uploads/2025/11/mgo_enviros_35-scaled.jpg?wsr
+
 url: https://raw.githubusercontent.com/api-evangelist/evolution-mining/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:australia-apidays-2026
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-10-21 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-10-21'
+
 modified: '2026-10-21'
+
 tags:
 - Company
-apis: []
+- Mining
+- Gold
+- Copper
+- Natural Resources
+- Australia
+- Canada
+- ASX Listed
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: WellKnown
+  url: well-known/evolution-mining-well-known.yml
+- type: Hosts
+  url: hosts/evolution-mining-hosts.yml
+- type: Vendors
+  url: vendors/evolution-mining-vendors.yml
+- type: DomainSecurity
+  url: security/evolution-mining-domain-security.yml
 - type: Website
-  url: https://evolutionmining.com.au/
+  url: https://evolutionmining.com/
+- type: About
+  url: https://evolutionmining.com/about-us/
+- type: Newsroom
+  url: https://evolutionmining.com/news/
+- type: InvestorRelations
+  url: https://evolutionmining.com/investor-centre/
+- type: Sustainability
+  url: https://evolutionmining.com/sustainability/
+- type: Careers
+  url: https://evolutionmining.com/careers/
+- type: Support
+  url: https://evolutionmining.com/contact-us/
+- type: TermsOfService
+  url: https://evolutionmining.com/terms-and-conditions/
+- type: PrivacyPolicy
+  url: https://evolutionmining.com/documents/privacy-policy/
+- type: LinkedIn
+  url: https://www.linkedin.com/company/evolution-mining/
+- type: YouTube
+  url: https://www.youtube.com/@evolutionmining_au
+
+apis: []
+
+x-coverage:
+  state: covered
+  reason: identity-verified
+  detail: evolutionmining.com.au redirects to evolutionmining.com, which titles itself "Evolution Mining" and names Evolution
+    Mining LTD. ("EVN"); same company, so the Website pointer moved to the canonical host. No developer portal, API docs or
+    API reference are linked from the site.
+  evidence:
+  - url: https://evolutionmining.com.au/
+    status: 301
+  - url: https://evolutionmining.com/
+    status: 200
+  - url: https://evolutionmining.com/contact-us/
+    status: 200
+  - url: https://evolutionmining.com/terms-and-conditions/
+    status: 200
+  - url: https://evolutionmining.com/documents/privacy-policy/
+    status: 200
+x-enrichment:
+  date: '2026-10-21'
+  status: enriched
+  artifacts_added: 11
+  pass: modular-v1
+  engine: identity=anthropic,contract=anthropic,surfaces=anthropic,docs=anthropic,regulatory=anthropic

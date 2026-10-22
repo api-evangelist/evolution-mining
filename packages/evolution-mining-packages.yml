@@ -1,0 +1,8 @@
+name: Evolution Mining packages
+generated: '2026-10-21'
+method: none
+note: >-
+  Checked, nothing found. Evolution Mining (ASX: EVN) is a gold miner with no public developer API, docs or SDK.
+  registry.npmjs.org/evolution-mining -> 404; pypi.org/pypi/evolution-mining/json -> 404;
+  npm search "evolutionmining" -> 0 results; web search found no first-party SDK.
+packages: []

@@ -1,0 +1,64 @@
+generated: '2026-10-21'
+method: searched
+source: https://evolutionmining.com/wp-content/uploads/2025/10/privacy-policy.pdf
+note: >-
+  Read from Evolution Mining's own Privacy Policy (PDF, Version Control 5.01, linked as "Privacy Policy"
+  from the evolutionmining.com footer) and its Terms & Conditions page. Evolution Mining is an ASX-listed
+  gold miner with no public API; these are corporate-website legal pages. Neither page speaks to
+  subprocessors (beyond generic "third party service providers"), data residency / overseas disclosure,
+  retention periods, breach notification, GPC, or the other catalog signals, so none are recorded.
+signals:
+  data_subject_request:
+    url: https://evolutionmining.com/wp-content/uploads/2025/10/privacy-policy.pdf
+    section: '9 Accessing or correcting your personal information'
+    channel: PrivacyOfficer@evolutionmining.com
+    stated_sla: 'We try to make your information available within 30 days after you ask us for it.'
+    rights_named: [access, correction, opt-out of direct marketing]
+    escalation: Office of the Australian Information Commissioner (OAIC)
+    evidence:
+    - source: https://evolutionmining.com/wp-content/uploads/2025/10/privacy-policy.pdf
+      http_status: 200
+      fetched: '2026-10-21'
+      quote: >-
+        "You can do any of these things by contacting our Privacy Officer at PrivacyOfficer@evolutionmining.com.
+        We try to make your information available within 30 days after you ask us for it."
+    - source: https://evolutionmining.com/wp-content/uploads/2025/10/privacy-policy.pdf
+      http_status: 200
+      fetched: '2026-10-21'
+      quote: >-
+        "If you are not satisfied with the outcome of any internal investigation we conduct, you may lodge a
+        complaint with the Office of the Australian Information Commissioner (OAIC) at enquiries@oaic.gov.au
+        or on 1300 363 992."
+    note: >-
+      Under the Privacy Act 1988 (Cth) and Spam Act 2003 (Cth) the policy names rights to request access,
+      ask for correction, and opt out of direct marketing, via a named Privacy Officer mailbox with a 30-day
+      target, and OAIC escalation. Deletion and portability are not named.
+  ai_transparency:
+    url: https://evolutionmining.com/wp-content/uploads/2025/10/privacy-policy.pdf
+    section: '6 Artificial Intelligence'
+    evidence:
+    - source: https://evolutionmining.com/wp-content/uploads/2025/10/privacy-policy.pdf
+      http_status: 200
+      fetched: '2026-10-21'
+      quote: >-
+        "Evolution may use artificial intelligence tools to assist with recruitment, workforce planning, employee
+        communication, document drafting, data analysis, learning and development, compliance activities and
+        operational decision support. Human oversight is maintained for material employment decisions."
+    note: >-
+      A disclosure that personal information may be processed by AI tools, listing the use cases, with a
+      human-oversight commitment limited to material employment decisions. No named models or vendors.
+  accessibility_conformance:
+    url: https://evolutionmining.com/terms-and-conditions/
+    section: Accessibility
+    standard: WCAG 2.2 AA
+    evidence:
+    - source: https://evolutionmining.com/terms-and-conditions/
+      http_status: 200
+      fetched: '2026-10-21'
+      quote: >-
+        "Evolution Mining strives to maintain this website in accordance with WCAG 2.2 AA accessibility
+        standards. If you encounter an accessibility barrier, please contact us using the details below so we
+        can assist."
+    note: >-
+      A stated aspiration ("strives to") to WCAG 2.2 AA for the website, with a barrier-reporting channel;
+      not a formal conformance claim or audited statement.
